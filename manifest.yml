@@ -1,0 +1,32 @@
+min_os_version: 1.3.8
+name: Anime Helper
+package: community.lazycat.app.animehelper
+version: 3.3.1
+description: "自动追番/下载工具，使用Docker部署，支持qBittorrent和Aria下载"
+homepage: https://github.com/Zhoucheng133/Anime-Helper
+author: Zhoucheng133
+application:
+  subdomain: animehelper
+  background_task: true
+  public_path:
+    - /
+
+  upstreams:
+    - location: /
+      backend: http://animehelper:3000/
+
+services:
+  animehelper:
+    # zhouc1230/anime-helper:latest
+    image: registry.lazycat.cloud/czyt/zhouc1230/anime-helper:d0f0dcf4c2b74766
+    container_name: animehelper
+    binds:
+      - /lzcapp/var/db:/app/db
+
+locales:
+  zh:
+    name: "Anime Helper"
+    description: "自动追番/下载工具，使用Docker部署，支持qBittorrent和Aria下载"
+  en:
+    name: "Anime Helper"
+    description: "Auto anime tracking/downloading tool, deployed with Docker, supporting qBittorrent and Aria download"
