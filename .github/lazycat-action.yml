@@ -28,9 +28,9 @@ images:
     channel: custom
     sort: created
     tag_regex: '^latest$'
-    require_digest_match: true
     delivery:
       mode: mirror
+      require_digest_match: true
 
 stores:
   official:
