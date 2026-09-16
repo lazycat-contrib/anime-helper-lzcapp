@@ -1,0 +1,16 @@
+application:
+  subdomain: animehelper
+  background_task: true
+  public_path:
+    - /
+
+  upstreams:
+    - location: /
+      backend: http://animehelper:3000/
+
+services:
+  animehelper:
+    # upstream: zhouc1230/anime-helper:latest
+    image: docker.1ms.run/zhouc1230/anime-helper:latest@sha256:231dfcc8e11cf23fefa5336fa0f75033a35ba8ee85056996b3042ee44f5884f2
+    binds:
+      - /lzcapp/var/db:/app/db
