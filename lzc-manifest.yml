@@ -3,15 +3,13 @@ application:
   background_task: true
   public_path:
     - /
-
   upstreams:
     - location: /
       backend: http://animehelper:3000/
-
 services:
   animehelper:
-    # upstream: zhouc1230/anime-helper:latest
+    # upstream: zhouc1230/anime-helper:latest@sha256:3ed4718bace4a02f0da5370d492673a6bb660eff7e40a79d9d911f456847df71
     # digest pin 使用 amd64 平台级 digest（Action 的 mirror 校验按 target_arch 解析 index 后比较平台 digest）
-    image: docker.1ms.run/zhouc1230/anime-helper:latest@sha256:656153d8a1f0add3609f1d7859eea0d2496e9890db8bb80313beb6025ac5cb63
+    image: docker.1ms.run/zhouc1230/anime-helper:latest@sha256:3ed4718bace4a02f0da5370d492673a6bb660eff7e40a79d9d911f456847df71
     binds:
       - /lzcapp/var/db:/app/db
