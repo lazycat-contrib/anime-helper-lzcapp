@@ -1,4 +1,5 @@
 package: community.lazycat.app.animehelper
+license: MIT
 version: 3.3.2
 name: Anime Helper
 description: "自动追番/下载工具，使用Docker部署，支持qBittorrent和Aria下载"
