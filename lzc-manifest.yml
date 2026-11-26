@@ -8,8 +8,8 @@ application:
       backend: http://animehelper:3000/
 services:
   animehelper:
-    # upstream: zhouc1230/anime-helper:latest@sha256:dae8e8aa3e42c81a9c9c6160dfbd8ddd18948ec989218a6e104a06fa0ef16c63
+    # upstream: zhouc1230/anime-helper:latest@sha256:7683d45c76866b1ffe83b119d8579250e4c2bdc701f1671bcf8bacf34cf0d0f2
     # digest pin 使用 amd64 平台级 digest（Action 的 mirror 校验按 target_arch 解析 index 后比较平台 digest）
-    image: docker.1ms.run/zhouc1230/anime-helper:latest@sha256:dae8e8aa3e42c81a9c9c6160dfbd8ddd18948ec989218a6e104a06fa0ef16c63
+    image: docker.1ms.run/zhouc1230/anime-helper:latest@sha256:7683d45c76866b1ffe83b119d8579250e4c2bdc701f1671bcf8bacf34cf0d0f2
     binds:
       - /lzcapp/var/db:/app/db
